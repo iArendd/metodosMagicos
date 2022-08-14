@@ -22,6 +22,17 @@ class magicGetItemLen:
     def __getitem__(self, posicao):
         return self.pessoas[posicao]
 
+a = magicGetItemLen()
+print('\nResultado do magicGetItem: ')
+print(a[0])
+
+#---------------------------------------------------------------------------------------
+
+class magicLen:
+
+    def __init__(self):
+        self.pessoas = ['Matheus', 'Caio', 'Marcos', 'João', 'Felipe']
+
     '''3 - Possibilita mostrar o tamanho de uma list de uma class criada pelo programador'''
     def __len__(self) -> int:
 
@@ -37,8 +48,8 @@ class magicGetItemLen:
 
         return w
 
-w = magicGetItemLen()
-print('\nResultado do magicGetItem e magicLen: ')
+w = magicLen()
+print('\nResultado do magicLen: ')
 print(len(w))
 
 #---------------------------------------------------------------------------------------
