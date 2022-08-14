@@ -26,9 +26,22 @@ class Pessoa:
 
         return tam
 
-
 x = Pessoa()
 print(x[0])
 
 tam = Pessoa()
 print(len(tam))
+
+#---------------------------------------------------------------------------------------
+
+class Pessoa2:
+
+    def __init__(self):
+        self.pessoas2 = ['Matheus', 'Caio', 'Marcos', 'João', 'Felipe']
+
+    '''4 - Permite que uma list seja concatenada com outra list'''
+    def __add__(self, p2):
+        return self.pessoas2 + p2
+
+i = Pessoa2()
+print(i + ['Claudio', 'Luiz'])
