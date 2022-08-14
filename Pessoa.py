@@ -5,7 +5,7 @@ class magicInitStr:
 
     '''1 - Possibilita retornar os elementos de uma list quando a class é atribuida à alguma variável'''
     def __str__(self):
-        return f'Pessoa(pessoas = {self.pessoas})'
+        return f'magicInitStr(pessoas = {self.pessoas})'
 
 x = magicInitStr()
 print('\nResultado do magicInit e magicStr: ')
@@ -82,3 +82,21 @@ j = magicMul()
 
 print('\nResultado do magicMul: ')
 print(j * 2)
+
+#---------------------------------------------------------------------------------------
+
+class magicDelItemIndice:
+
+    def __init__(self):
+        self.pessoas = ['Matheus', 'Caio', 'Marcos', 'João', 'Felipe']
+        
+    def __delitem__(self, n):
+        del self.pessoas[n]
+
+        return self.pessoas
+
+
+p = magicDelItemIndice()
+print('\nResultado do magicDelItem - Indice: ')
+print(p)
+    
